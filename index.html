@@ -7,13 +7,50 @@
 <body>
 	<div class="chat">
 		<input type="text" class="chatName" placeholder="Enter your name">
-		<div class="chatMessage">
-			Alex:hello!
+		<div class="chatMessages">
+			<div class="chatMessage">Alex:hello!</div>
 		</div>
 
 
 		<textarea class="chatTextarea" placeholder="Type your message here"></textarea>
 		<div class="chatStatus">Status: <span>Idle</span></div>
 	</div>
+
+	<script src="http://127.0.0.1:8080/socket.io/socket.io.js"></script>
+
+	<script>
+	(function() {
+		var getNode = function(s) {
+			return document.querySelector(s);
+		},
+
+		//Get required nodes
+		testarea = getNode('.chat textarea');
+		chatName = getNode('.chatName');
+
+		try {
+			var socket = io.connect('http://127.0.0.1:8080');
+		} catch(e) {
+			//set status to warn user
+		}
+		if(socket !== undefined) {
+			
+			//listen to text area
+			textarea.addEventListener('keydown', function(event) {
+				var self = this,
+					name = chatName.value;
+
+				if(event.which === 13 && event.shiftKey === false) {
+					socket.emit('input', {
+						name: name,
+						message: self.value
+					});
+
+					event.preventDefault();
+				}
+			});
+		}
+	})
+	</script>
 </body>
 </html>
