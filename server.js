@@ -11,7 +11,7 @@ mongo.connect('mongodb://127.0.0.1/chatdb', function(err, db){
 				socket.emit('status', s);
 			};	
 		// emit all messages
-		col.find().limit(100).sort({id: 1}).toArray(function(err, res) {
+		col.find().limit(100).sort({_id: 1}).toArray(function(err, res) {
 			if(err) throw(err);
 			socket.emit('output', res)
 		});
@@ -24,7 +24,6 @@ mongo.connect('mongodb://127.0.0.1/chatdb', function(err, db){
 				//looking for whitespace in name or message
 			if(whitespacePattern.test(name) || whitespacePattern.test(message)) {
 				sendStatus('Name and message is required.');
-
 			} else {
 				col.insert({name: name, message: message}, function() {
 					
