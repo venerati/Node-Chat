@@ -9,15 +9,20 @@ input {
 
 .chatName,
 .chatTextarea,
-.chatMessage {
-	border:1px solid #bbb;
+.chatMessages {
+	border:2px solid #bbb;
+	background-color: #ADD8E6;
 }
 
-.chatMessage {
+.chatMessages {
 	width: 100%;
 	height: 250px;
 	overflow-y:scroll;
 	padding: 8px;
+}
+
+.chatMessage {
+	margin-bottom: 10px;
 }
 
 .chatName {
