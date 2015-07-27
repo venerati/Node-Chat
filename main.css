@@ -1,16 +1,24 @@
 body,
 textarea,
 input {
-	font: 13px "Trebuchet MS", sans-serif;
+	font: 13px "Lucida Console", Courier;
+	color: #6F4E37;
+}
+
+h1 {
+	margin:20;
+	text-align: center;
 }
 .chat {
 	max-width: 250px;
+	margin:0 auto;
 }
 
+.chatStatus,
 .chatName,
 .chatTextarea,
 .chatMessages {
-	border:2px solid #bbb;
+	border:2px solid #6F4E37;
 	background-color: #ADD8E6;
 }
 
@@ -41,7 +49,7 @@ input {
 }
 
 .chatStatus {
-	color: #bbb;
+	margin: 0;
 }
 
 .chatTextarea,
