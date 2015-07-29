@@ -9,38 +9,43 @@ h1 {
 	margin:20;
 	text-align: center;
 }
-.chat {
+
+
+
+.chatWrapper .chat {
 	max-width: 250px;
 	margin:0 auto;
 }
 
-.chatStatus,
-.chatName,
-.chatTextarea,
-.chatMessages {
+.chatWrapper .chatStatus,
+.chatWrapper .chatName,
+.chatWrapper .chatTextarea,
+.chatWrapper .chatMessages {
 	border:2px solid #6F4E37;
 	background-color: #ADD8E6;
 }
 
-.chatMessages {
+.chatWrapper .chatMessages {
 	width: 100%;
 	height: 250px;
 	overflow-y:scroll;
 	padding: 8px;
 }
 
-.chatMessage {
+.chatWrapper .chatMessage {
 	margin-bottom: 10px;
 }
 
-.chatName {
+.chatWrapper .chatName {
 	width: 100%;
-	padding: 8px;
+	padding: ;
 	border-bottom: 0;
 	margin: 0;
+	width: 246px;
+
 }
 
-.chatTextarea {
+.chatWrapper .chatTextarea {
 	width: 100%;
 	padding: 8px;
 	margin: 0;
@@ -48,11 +53,11 @@ h1 {
 	max-width: 100%;
 }
 
-.chatStatus {
+.chatWrapper .chatStatus {
 	margin: 0;
 }
 
-.chatTextarea,
-.chatName {
+.chatWrapper .chatTextarea,
+.chatWrapper .chatName {
 	outline:none;
 }
