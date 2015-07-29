@@ -10,11 +10,21 @@ h1 {
 	text-align: center;
 }
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 
 .chatWrapper .chat {
 	max-width: 250px;
 	margin:0 auto;
+	margin-top: 15px;
 }
 
 .chatWrapper .chatStatus,
@@ -22,7 +32,6 @@ h1 {
 .chatWrapper .chatTextarea,
 .chatWrapper .chatMessages {
 	border:2px solid #6F4E37;
-	background-color: #ADD8E6;
 }
 
 .chatWrapper .chatMessages {
@@ -38,16 +47,17 @@ h1 {
 
 .chatWrapper .chatName {
 	width: 100%;
-	padding: ;
+	padding-left: 8px;
 	border-bottom: 0;
 	margin: 0;
-	width: 246px;
+	width: 238px;
 
 }
 
 .chatWrapper .chatTextarea {
 	width: 100%;
 	padding: 8px;
+	padding-top: 14px;
 	margin: 0;
 	border-top:0;
 	max-width: 100%;
