@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- materialeizecss icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
 
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 <link rel="stylesheet" type="text/css" href="main.css">
 	<title>Chat App</title>
 </head>
 <body>
 <header>
-	<h1>Coffee Chat</h2>
-</header>
-<script src="http://127.0.0.1:8080/socket.io/socket.io.js"></script>
-	<div class="chat">
-		<input type="text" class="chatName" placeholder="Enter your name">
-		<div class="chatMessages">
-			<div class="chatMessage"></div>
-		</div>
-
-
-		<textarea class="chatTextarea" placeholder="Type your message here"></textarea>
-		<div class="chatStatus">Status: <span>Idle</span></div>
+	<div class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper">
+				<div class="row">
+					<div class="col m6">
+						<a href="#!" class="brand-logo">Coffee Chat</a>
+					</div>
+					<div class="col m6">
+						<i class="material-icons">question_answer</i>
+					</div>
+				</div>				
+			</div>
+		</nav>
 	</div>
-
+</header>
+<main>
+	<script src="http://127.0.0.1:8080/socket.io/socket.io.js"></script>
+		<div class="chatWrapper">
+			<div class="chat">
+				<input type="text" class="chatName brown-text" placeholder="Enter your name">
+					<div class="chatMessages">
+						<div class="chatMessage"></div>
+					</div>
+				<textarea class="chatTextarea" placeholder="Type your message here"></textarea>
+				<div class="chatStatus">Status: <span>Idle</span></div>
+			</div>
+		</div>
 	<script type="text/javascript">
 		(function () {
 			var getNode = function(s) {
@@ -97,11 +116,9 @@
 				});
 			}
 		})();
-
-
 	</script>
-
-
-
+</main>
+<footer>
+</footer>
 </body>
 </html>
