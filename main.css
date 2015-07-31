@@ -16,15 +16,21 @@ body {
     flex-direction: column;
   }
 
-  main {
+main {
     flex: 1 0 auto;
+    position: relative;
   }
 
 
 .chatWrapper .chat {
 	max-width: 250px;
-	margin:0 auto;
-	margin-top: 15px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 365px;
+	width: 250px;
+	margin:-182px 0 0 -125px;
+	
 }
 
 .chatWrapper .chatStatus,
